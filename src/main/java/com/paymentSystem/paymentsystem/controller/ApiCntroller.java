@@ -45,7 +45,7 @@ public class ApiCntroller {
     // this is for testing
     @GetMapping(value = "/")
     public String getPage() {
-        return appKey;
+        return "Welcome to paymenthub-api";
     }
 
     // this is for testing
