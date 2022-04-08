@@ -68,7 +68,7 @@ public class PaymentData {
         this.amount = newAmount;
     }
 
-    public String getCurrence() {
+    public String getCurrency() {
         return currency;
     }
 
