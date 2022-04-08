@@ -142,7 +142,7 @@ public class ApiCntroller {
 //             System.out.print("this is for the error");
 //             return result.getBody();
 //         }
-        return "how are you"
+        return "how are you";
     }
 
     @PostMapping(value = "/makepayout")
