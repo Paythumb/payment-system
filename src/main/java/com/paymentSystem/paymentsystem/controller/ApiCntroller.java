@@ -93,7 +93,7 @@ public class ApiCntroller {
     }
 
     @PostMapping(value = "/makepayment")
-    public Object paymentBody(@RequestBody PaymentData paymentContainer) {
+    public String paymentBody() {
 
         RestTemplate restTemplate = new RestTemplate();
         String api = appKey;
