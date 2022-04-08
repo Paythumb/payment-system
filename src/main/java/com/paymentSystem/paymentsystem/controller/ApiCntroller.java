@@ -95,46 +95,46 @@ public class ApiCntroller {
     @PostMapping(value = "/makepayment")
     public Object paymentBody(@RequestBody PaymentData paymentContainer) {
 
-        RestTemplate restTemplate = new RestTemplate();
-        String api = appKey;
-        String url = "https://api.flutterwave.com/v3/charges?type=mobile_money_uganda";
+//         RestTemplate restTemplate = new RestTemplate();
+//         String api = appKey;
+//         String url = "https://api.flutterwave.com/v3/charges?type=mobile_money_uganda";
         // create headers
-        HttpHeaders headers = new HttpHeaders();
+//         HttpHeaders headers = new HttpHeaders();
 
         // set content-type header
-        headers.setContentType(MediaType.APPLICATION_JSON);
+//         headers.setContentType(MediaType.APPLICATION_JSON);
 
         // set accept header
-        headers.setAccept(Collections.singletonList(MediaType.APPLICATION_JSON));
+//         headers.setAccept(Collections.singletonList(MediaType.APPLICATION_JSON));
         // set authorization header
-        headers.add("Authorization", "Bearer " + api);
+//         headers.add("Authorization", "Bearer " + api);
         // long amount = paymentContainer.getAmount();
 
-        String amount = Long.toString(paymentContainer.getAmount());
-        String currence = paymentContainer.getCurrence();
-        String email = paymentContainer.getEmail();
-        String txRef = paymentContainer.getTxRef();
-        String fullName = paymentContainer.getFullName();
-        String phoneNumber = Long.toString(paymentContainer.getPhoneNumber());
-        String network = paymentContainer.getNework();
-        String redirect = paymentContainer.getRedirectUrl();
+//         String amount = Long.toString(paymentContainer.getAmount());
+//         String currence = paymentContainer.getCurrence();
+//         String email = paymentContainer.getEmail();
+//         String txRef = paymentContainer.getTxRef();
+//         String fullName = paymentContainer.getFullName();
+//         String phoneNumber = Long.toString(paymentContainer.getPhoneNumber());
+//         String network = paymentContainer.getNework();
+//         String redirect = paymentContainer.getRedirectUrl();
         // String paymentOption = paymentContainer.getPaymentOption();
         // String description = paymentContainer.getDescription();
 
         // Object for payment process
-        HashMap<String, String> map = new HashMap<>();
-        map.put("amount", amount);
-        map.put("currency", currence);
-        map.put("email", email);
-        map.put("tx_ref", txRef);
-        map.put("fullname", fullName);
-        map.put("phone_number", phoneNumber);
-        map.put("network", network);
-        map.put("redirect_url", redirect);
+//         HashMap<String, String> map = new HashMap<>();
+//         map.put("amount", amount);
+//         map.put("currency", currence);
+//         map.put("email", email);
+//         map.put("tx_ref", txRef);
+//         map.put("fullname", fullName);
+//         map.put("phone_number", phoneNumber);
+//         map.put("network", network);
+//         map.put("redirect_url", redirect);
 
-        HttpEntity<Map<String, String>> entity = new HttpEntity<>(map, headers);
+//         HttpEntity<Map<String, String>> entity = new HttpEntity<>(map, headers);
 
-        ResponseEntity<Object> result = restTemplate.postForEntity(url, entity, Object.class);
+//         ResponseEntity<Object> result = restTemplate.postForEntity(url, entity, Object.class);
 
 //         if (result.getStatusCode() == HttpStatus.OK) {
 //             return result.getBody();
@@ -142,7 +142,7 @@ public class ApiCntroller {
 //             System.out.print("this is for the error");
 //             return result.getBody();
 //         }
-        return map
+        return "how are you"
     }
 
     @PostMapping(value = "/makepayout")
