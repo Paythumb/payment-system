@@ -45,7 +45,7 @@ public class ApiCntroller {
     // this is for testing
     @GetMapping(value = "/")
     public String getPage() {
-        return "Welcome to paymenthub-api";
+        return appKey;
     }
 
     // this is for testing
@@ -231,7 +231,7 @@ public class ApiCntroller {
 
     @GetMapping(value = "/tester")
     public String getTester() {
-        final String uri = "https://fakestoreapi.com/products";
+        final String uri = "https://quoters.apps.pcfone.io/api/random";
         RestTemplate restTemplate = new RestTemplate();
         String result = restTemplate.getForObject(uri, String.class);
         return result;
