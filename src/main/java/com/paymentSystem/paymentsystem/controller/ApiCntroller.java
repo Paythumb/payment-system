@@ -147,7 +147,7 @@ public class ApiCntroller {
     @PostMapping(value = "/makepayout")
     public Object makePayOut(@RequestBody PayOutData payOutData) {
         RestTemplate restTemplate = new RestTemplate();
-        String api = "FLWSECK_TEST-91d560bbdcddae17f003cb77bca3acaa-X";
+        String api = appKey;
         String url = "https://api.flutterwave.com/v3/transfers";
         // create headers
         HttpHeaders headers = new HttpHeaders();
@@ -208,7 +208,7 @@ public class ApiCntroller {
         String json = response.getBody();
         JsonObject convertedObject = new Gson().fromJson(json, JsonObject.class);
 
-        return convertedObject;
+        return json;
 
     }
 
