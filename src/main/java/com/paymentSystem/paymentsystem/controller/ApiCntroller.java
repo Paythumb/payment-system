@@ -95,19 +95,19 @@ public class ApiCntroller {
     @PostMapping(value = "/makepayment")
     public Object paymentBody(@RequestBody PaymentData paymentContainer) {
 
-//         RestTemplate restTemplate = new RestTemplate();
-//         String api = appKey;
-//         String url = "https://api.flutterwave.com/v3/charges?type=mobile_money_uganda";
+        RestTemplate restTemplate = new RestTemplate();
+        String api = appKey;
+        String url = "https://api.flutterwave.com/v3/charges?type=mobile_money_uganda";
         // create headers
-//         HttpHeaders headers = new HttpHeaders();
+        HttpHeaders headers = new HttpHeaders();
 
         // set content-type header
-//         headers.setContentType(MediaType.APPLICATION_JSON);
+        headers.setContentType(MediaType.APPLICATION_JSON);
 
         // set accept header
-//         headers.setAccept(Collections.singletonList(MediaType.APPLICATION_JSON));
+        headers.setAccept(Collections.singletonList(MediaType.APPLICATION_JSON));
         // set authorization header
-//         headers.add("Authorization", "Bearer " + api);
+        headers.add("Authorization", "Bearer " + api);
         // long amount = paymentContainer.getAmount();
 
 //         String amount = Long.toString(paymentContainer.getAmount());
