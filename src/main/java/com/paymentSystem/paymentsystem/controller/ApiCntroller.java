@@ -111,7 +111,7 @@ public class ApiCntroller {
         // long amount = paymentContainer.getAmount();
 
         String amount = Long.toString(paymentContainer.getAmount());
-        String currence = paymentContainer.getCurrence();
+        String currence = "lkhjldfhd";
         String email = paymentContainer.getEmail();
         String txRef = paymentContainer.getTxRef();
         String fullName = paymentContainer.getFullName();
