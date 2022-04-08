@@ -231,7 +231,7 @@ public class ApiCntroller {
 
     @GetMapping(value = "/tester")
     public String getTester() {
-        final String uri = "https://quoters.apps.pcfone.io/api/random";
+        final String uri = "https://fakestoreapi.com/products";
         RestTemplate restTemplate = new RestTemplate();
         String result = restTemplate.getForObject(uri, String.class);
         return result;
