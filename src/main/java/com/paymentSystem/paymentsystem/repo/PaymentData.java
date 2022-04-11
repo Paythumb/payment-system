@@ -16,11 +16,11 @@ public class PaymentData {
         return payment_options;
     }
 
-    public String getRedirectUrl() {
+    public String getRedirect_url() {
         return redirect_url;
     }
 
-    public void setRedirectUrl(String newRedirectUrl) {
+    public void setRedirect_url(String newRedirectUrl) {
         this.redirect_url = newRedirectUrl;
     }
 
