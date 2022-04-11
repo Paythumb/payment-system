@@ -117,7 +117,7 @@ public class ApiCntroller {
         String fullName = paymentContainer.getFullName();
         String phoneNumber = Long.toString(paymentContainer.getPhoneNumber());
         String network = paymentContainer.getNework();
-        String redirect = paymentContainer.getRedirectUrl();
+        String redirect = paymentContainer.getRedirect_url();
         // String paymentOption = paymentContainer.getPaymentOption();
         // String description = paymentContainer.getDescription();
 
