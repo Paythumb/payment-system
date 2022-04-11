@@ -132,17 +132,16 @@ public class ApiCntroller {
         map.put("network", network);
         map.put("redirect_url", redirect);
 
-//         HttpEntity<Map<String, String>> entity = new HttpEntity<>(map, headers);
+        HttpEntity<Map<String, String>> entity = new HttpEntity<>(map, headers);
 
-//         ResponseEntity<Object> result = restTemplate.postForEntity(url, entity, Object.class);
+        ResponseEntity<Object> result = restTemplate.postForEntity(url, entity, Object.class);
 
-//         if (result.getStatusCode() == HttpStatus.OK) {
-//             return result.getBody();
-//         } else {
-//             System.out.print("this is for the error");
-//             return result.getBody();
-//         }
-        return map;
+        if (result.getStatusCode() == HttpStatus.OK) {
+            return result.getBody();
+        } else {
+            System.out.print("this is for the error");
+            return result.getBody();
+        }
     }
 
     @PostMapping(value = "/makepayout")
