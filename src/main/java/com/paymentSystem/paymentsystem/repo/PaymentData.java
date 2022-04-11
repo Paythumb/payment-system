@@ -52,11 +52,11 @@ public class PaymentData {
         this.network = newNetwork;
     }
 
-    public String getTxRef() {
+    public String getTx_ref() {
         return tx_ref;
     }
 
-    public void setTxRef(String newTxRef) {
+    public void setTx_ref(String newTxRef) {
         this.tx_ref = newTxRef;
     }
 
